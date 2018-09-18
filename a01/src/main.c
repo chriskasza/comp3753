@@ -10,6 +10,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "datastorer.h"
 
 extern int errno;
 
@@ -75,7 +76,7 @@ int init_dir(const char *path)
  * Parses the user's input.
  * Hands off user's request to proper function.
  */
-void prompt_loop()
+void prompt_loop(const char *path)
 {
     char command[255], cmd_type[25];
     // (char*)malloc(255 * sizeof(char));
@@ -99,23 +100,23 @@ void prompt_loop()
 
         if (strcmp(cmd_type, "add") == 0)
         {
-            printf("gonna add things\n");
-            // add(command);
+            // printf("gonna add things\n");
+            ds_add(command, path);
         }
         else if (strcmp(cmd_type, "show") == 0)
         {
             printf("gonna show things\n");
-            // show(command);
+            // show(command, path);
         }
         else if (strcmp(cmd_type, "delete") == 0)
         {
             printf("gonna delete things\n");
-            // delete(command);
+            // delete(command, path);
         }
         else if (strcmp(cmd_type, "set") == 0)
         {
             printf("gonna set things\n");
-            // set(command);
+            // set(command, path);
         }
         else if (strcmp(cmd_type, "quit") == 0)
         {
@@ -156,7 +157,7 @@ int main(int argc, char *argv[])
         return EXIT_FAILURE;
     }
 
-    prompt_loop();
+    prompt_loop(dir);
 
     return EXIT_SUCCESS;
 }

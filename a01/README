@@ -1,4 +1,4 @@
-A simple CLI application to store and retrieve data from files.
+A simple CLI application to store and retrieve data from disk.
 
 Version:     0.1
 Author:      Chris Kasza
@@ -9,7 +9,7 @@ Assignment:  #1 - Data Storage Essentials
 Usage:
 kasza_a1 [DIR]
 
-Where DIR is the path to the directory where the files will be stored.
+Where DIR is the path to the directory where the file will be stored.
 If omitted /tmp/kasza_a1 will be used.
 
 
@@ -23,3 +23,9 @@ SET <attr> = <value> WHEN <attr2> = <value2>
 QUIT
 
 
+Record structure
+Maximum total character over all fields is 1000 characters
+Name - maximum 1000 character string
+Email - maximum 1000 character string
+Year - four digit integer in the range 1900-current year (e.g. 2018)
+Country - maximum 1000 character string

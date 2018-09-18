@@ -1,5 +1,10 @@
-NOTES
+NOTES/TODOS
+
+Handle dynamic path argument instead of limiting to 255 chars.
+Same for user commands.
 
 Check whether using ANSI C or not
 https://stackoverflow.com/questions/11350878/how-can-i-determine-if-the-operating-system-is-posix-in-c
 
+Edge cases
+- directory path has a space in it
